@@ -1,11 +1,20 @@
 def add(a, b):
     return a + b
 
+
 def subtract(a, b):
     return a - b
 
+
 def multiply(a, b):
     return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        return None
+    return a / b
+
 
 def get_number(prompt):
     while True:
@@ -46,7 +55,6 @@ def main():
             result = add(num1, num2)
             print(f"Result: {num1} + {num2} = {result}")
 
-
         elif choice == "S":
             num1 = get_number("Enter first number: ")
             num2 = get_number("Enter second number: ")
@@ -59,9 +67,15 @@ def main():
             result = multiply(num1, num2)
             print(f"Result: {num1} * {num2} = {result}")
 
-            
-        else:
-            print("This operation is not implemented yet.")
+        elif choice == "D":
+            num1 = get_number("Enter first number: ")
+            num2 = get_number("Enter second number: ")
+            result = divide(num1, num2)
+
+            if result is None:
+                print("Error: Cannot divide by zero.")
+            else:
+                print(f"Result: {num1} / {num2} = {result}")
 
 
 if __name__ == "__main__":
