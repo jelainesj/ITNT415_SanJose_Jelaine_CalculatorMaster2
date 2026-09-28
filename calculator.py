@@ -1,3 +1,13 @@
+def add(a, b):
+return a + b
+def get_number(prompt):
+while True:
+value = input(prompt).strip()
+try:
+return float(value)
+except ValueError:
+print("Invalid input. Please enter a valid number.")
+
 def show_menu():
 print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("Jel's Calculator")
