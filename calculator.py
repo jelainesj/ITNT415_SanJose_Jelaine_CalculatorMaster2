@@ -1,6 +1,9 @@
 def add(a, b):
     return a + b
 
+def subtract(a, b):
+    return a - b
+
 
 def get_number(prompt):
     while True:
@@ -40,6 +43,14 @@ def main():
             num2 = get_number("Enter second number: ")
             result = add(num1, num2)
             print(f"Result: {num1} + {num2} = {result}")
+
+
+        elif choice == "S":
+            num1 = get_number("Enter first number: ")
+            num2 = get_number("Enter second number: ")
+            result = subtract(num1, num2)
+            print(f"Result: {num1} - {num2} = {result}")
+            
         else:
             print("This operation is not implemented yet.")
 
